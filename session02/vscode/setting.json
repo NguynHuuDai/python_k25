@@ -1,0 +1,6 @@
+{
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUndefinedVariable": "none"
+  },
+  "pylint.args": ["--disable=C0304,C0114,W0104,E0602"]
+}
