@@ -9,9 +9,9 @@ for i in range(quantity):
     elif working_date == 0:
         print("Nhân viên nghỉ toàn bộ tháng")
     elif working_date >= 18:
-        print(f"name: {'*'*working_date} \nLàm việc chăm chỉ")
+        print(f"{name}: {'*'*working_date} \nLàm việc chăm chỉ")
     elif working_date < 10:
-        print(f"name: {'*'*working_date} \nLàm việc ít")
+        print(f"{name}: {'*'*working_date} \nLàm việc ít")
     else:
-        print(f"name: {'*'*working_date} \nLàm việc bình thường")
+        print(f"{name}: {'*'*working_date} \nLàm việc bình thường")
     
