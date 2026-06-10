@@ -44,7 +44,7 @@ while True:
             "name": name,
             "salary": salary
         })
-
+        
         print("Đã thêm nhân viên thành công!")
 
     elif choice == "2":
