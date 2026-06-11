@@ -1,5 +1,10 @@
 raw_input = "   nGuyen vaN aN  ;  2004   "
 
+parts = raw_input.split(";")
+name = parts[0].strip()
+birth_year = 2026 - int(parts[1].strip())
+name_parts = name.split()
+
 choice = ""
 while choice != "4":
     print("===== HỆ THỐNG XỬ LÝ THÀNH VIÊN =====")
@@ -12,18 +17,27 @@ while choice != "4":
 
     if choice == "1":
         print("\nChuỗi dữ liệu gốc:", raw_input)
+
     elif choice == "2":
-        raw_input = raw_input.strip()
-        parts = raw_input.split(";")
-        name = parts[0].strip()
-        birth_year = 2026 - int(parts[1].strip())
-        name_parts = name.split()
-        
-        # sau khi tách thì hiện tại name là nguyen van an còn năm sinh là parts[1]
         print("Họ tên chuẩn hóa:", name.title())
         print("Tuổi:", birth_year)
+
     elif choice == "3":
         id = name_parts[-1].upper() + parts[1].strip()[-2:]
         print("Mã ID tự động:", id)
-        email = name_parts[0].lower() + name_parts[1].lower() + name_parts[2].lower() + "@company.com"
+
+        email_prefix = ""
+        for word in name_parts[:-1]:
+            email_prefix += word[0].lower()  
+
+        email = email_prefix + name_parts[-1].lower() + "@company.com"
         print("Email tự động:", email)
+
+        print("\n--- THẺ THÀNH VIÊN ---")
+        print("Mã số:", id)
+        print("Họ tên:", name.title())
+        print("Email:", email)
+        print("----------------------")
+
+    elif choice == "4":
+        print("\nChương trình kết thúc. Cảm ơn và hẹn gặp lại!")
