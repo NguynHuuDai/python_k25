@@ -26,7 +26,7 @@ def addProduct():
     print(f"--- THÊM SẢN PHẨM MỚI ---")
     id_input = ""
     while id_input == "":
-        id_input = input("Nhập mã sản phẩm (ID): ")
+        id_input = input("Nhập mã sản phẩm (ID): ").upper()
         if id_input == "":
             print("ID không được để trống. Vui lòng nhập lại!")
     
@@ -51,7 +51,7 @@ def addProduct():
     
 
 def updateProductById():
-    input_searchId = input("Nhập vào id cần thay đổi giá: ")
+    input_searchId = input("Nhập vào id cần thay đổi giá: ").upper()
 
     for product in products:
         if input_searchId == product["id"]:
