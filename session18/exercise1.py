@@ -46,7 +46,7 @@ def addProduct():
     products.append({
         "id": id_input,
         "name": name_input,
-        "price": price_input
+        "price": price_input    
     })
     
 
