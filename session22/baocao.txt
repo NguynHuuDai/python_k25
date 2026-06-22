@@ -1,0 +1,20 @@
+Yêu cầu 1:
+    1
+    - biến base_rate trước khi chạy qua dòng điều kiện if distance >= 20 thì biến 
+    base_rate = 30000 do phương thức express
+
+    - biến base_rate sau khi chạy qua dòng điều kiện if distance >= 20 thì biến
+    base_rate lại gán giá trị base_rate = 10000 
+    => biến base_rate bị ghi đè  base_rate = 10000 chứ không phải cộng dồn  base_rate += 10000 khiến chương trình bị tính sai
+
+
+    2
+    - logger.info(...) ở đầu hàm không hiển thị ra màn hình Console khi chạy thử là vì
+    cấu hình logging hệ thống hiện tại đang để ở mức WARNING nên log theo info và debug bị ẩn
+    - cần bỏ tham số WARNING thay bằng INFO ở cấu hình logging.basicConfig() để nhìn thấy dòng log này
+
+    3
+    - số dòng logic bị sai là dòng 33 
+    - lỗi xảy ra khi tính phụ thu đường xa là do việc gán base_rate = 10000 điều này khiến cho giá trị base_rate
+    được thay trực tiếp bằng giá trị 10000 chứ không phải là công dồn
+    - cách thức đúng là dùng toán tử cộng dồn base_rate += 10000
